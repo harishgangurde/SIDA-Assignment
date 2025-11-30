@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "64001599292",
+    "project_id": "sida-application",
+    "storage_bucket": "sida-application.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64001599292:android:899d79b0ab60d3c1f1e039",
+        "android_client_info": {
+          "package_name": "com.example.sida_application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4eHpSJcBzZb788PrLJ6BZJ3zXn1HhzKc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
