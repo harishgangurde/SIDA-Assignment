@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'search_input_screen.dart';
 
 class EmptyProjectsScreen extends StatelessWidget {
   const EmptyProjectsScreen({super.key});
@@ -7,6 +8,25 @@ class EmptyProjectsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        title: const Text(
+          "Projects",
+          style: TextStyle(fontWeight: FontWeight.w600, color: Colors.black),
+        ),
+        centerTitle: true,
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.pushNamed(context, SearchInputScreen.routeName);
+            },
+            icon: const Icon(Icons.search, color: Colors.black),
+          ),
+        ],
+      ),
+
       body: SafeArea(
         child: Center(
           child: Column(
@@ -33,29 +53,12 @@ class EmptyProjectsScreen extends StatelessWidget {
                 style: TextStyle(color: Colors.grey),
               ),
               const SizedBox(height: 24),
-
-              /// 🔥 Updated Button
-              SizedBox(
-                width: 200,
-                height: 50,
-                child: FilledButton(
-                  style: FilledButton.styleFrom(
-                    backgroundColor: const Color(0xFF0066FF), // 🔵 New color
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                  ),
-                  onPressed: () {
-                    // TODO: Start a project flow
-                  },
-                  child: const Text(
-                    'Start a project',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      color: Colors.white,
-                    ),
-                  ),
+              FilledButton(
+                style: FilledButton.styleFrom(
+                  backgroundColor: Color(0xFF0066FF), // Blue button
                 ),
+                onPressed: () {},
+                child: const Text('Start a project'),
               ),
             ],
           ),
